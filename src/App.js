@@ -1,23 +1,33 @@
+
+import {useState} from "react"
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  // const [number, setNumber] = useState(22)
+
+  const [dogInventory, setDogInventory] = useState(
+    [{name:"Runa", age:4, id:1234},
+    {name:"Kiki", age:1, id:1212},
+    {name:"Hunter", age:5, id:1434},
+    {name:"Nova", age:4, id:1313}]
+    )
+
+  // function addDog(){
+  //     var newNumber = number + 1
+  //     //22
+  //   setNumber(newNumber)
+  // }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <h1>My dogs name is {number}</h1>
+      <button onClick={addDog}>
+      Activate Lasers
+    </button> */}
+      {dogInventory.map((dog) => 
+      <div>my dogs name is {dog.name} and thier age is {dog.age} and their id is {dog.id}</div>
+      )}
     </div>
   );
 }
