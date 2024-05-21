@@ -2,6 +2,7 @@
 import {useState} from "react"
 import logo from './logo.svg';
 import './App.css';
+import {Dog} from "./Dog"
 
 function App() {
   // const [number, setNumber] = useState(22)
@@ -19,14 +20,21 @@ function App() {
   //   setNumber(newNumber)
   // }
 
+    function sayName(){
+      console.log("----------")
+      console.log("This say name")
+    }
+
   return (
     <div className="App">
       {/* <h1>My dogs name is {number}</h1>
       <button onClick={addDog}>
       Activate Lasers
     </button> */}
+    <Dog name={"runa"} age={4} sayName={sayName} breed={"pit"} goodDog={true} color={"blue"} bestfriends={["kiki", "skadi","hunter"]} favFood={{drink:"water", food:"eggs"}}/>
+
       {dogInventory.map((dog) => 
-      <div>my dogs name is {dog.name} and thier age is {dog.age} and their id is {dog.id}</div>
+        <Dog key={dog.id} id={dog.id} sayName={sayName} name={dog.name} age={dog.age} />
       )}
     </div>
   );
