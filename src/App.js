@@ -14,6 +14,8 @@ function App() {
     {name:"Nova", age:4, id:1313}]
     )
 
+//ADD CATS FOR HOMEWORK
+
   // function addDog(){
   //     var newNumber = number + 1
   //     //22
@@ -36,6 +38,7 @@ function App() {
       {dogInventory.map((dog) => 
         <Dog key={dog.id} id={dog.id} sayName={sayName} name={dog.name} age={dog.age} />
       )}
+
     </div>
   );
 }
