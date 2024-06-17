@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 
 
 export const Bike = (props) => {
-    console.log(props)
+    
 
     return (
         <div onClick={props.deleteItem}>
