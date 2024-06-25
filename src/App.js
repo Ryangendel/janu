@@ -13,6 +13,7 @@ function App() {
   return (
     <div className="router">
       <REIContextProvider>
+        {1+1==3?<h1>way to go</h1>:<h1>youre wrong</h1>}
      <Router>
       <Routes>
         <Route path="/home" element={<Home />}/>

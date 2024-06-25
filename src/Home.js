@@ -44,7 +44,7 @@ console.log("lllllllllll")
     console.log(userName)
   }, [userName])
 
-
+  const [usersPrefrence, setUsersPrefrence] = useState("")
   const [dogInventory, setDogInventory] = useState(
     [{ name: "Coop bike", image: "https://spotbikes.com/cdn/shop/products/NEW-Rallye-Purple-1A_1600x.png?v=1681321231", price: 1018, id: 1234 },
     { name: "AVD 2.3", image: "https://spotbikes.com/cdn/shop/products/rocker-ss-black-trans_1600x.png?v=1625768927", price: 1498, id: 1212 },
@@ -53,6 +53,9 @@ console.log("lllllllllll")
     { name: "Topstone", image: "https://ep1.pinkbike.org/p6pb15492368/p6pb15492368.jpg", price: 1175, id: 1435 },
     { name: "Salsa", image: "https://spotbikes.com/cdn/shop/products/Mayhem-130-Details-21-A_1600x.jpg?v=1679368541", price: 800, id: 1316 }
     ])
+
+
+    
 
   //ADD CATS FOR HOMEWORK
 
@@ -84,8 +87,8 @@ console.log("lllllllllll")
         Add one to number
       </button>
       <h1>{number}</h1>
-      {dogInventory.map((bike) =>
-        <Bike name={bike.name} image={bike.image} id={bike.id} deleteItem={deleteItem} />
+      {dogInventory.map((banana) =>
+        <Bike name={banana.name} image={banana.image} id={banana.id} deleteItem={deleteItem} />
       )}
       <h1 id="joke"></h1>
      
